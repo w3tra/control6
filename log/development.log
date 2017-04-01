@@ -18220,3 +18220,1007 @@ Migrating to CreateImageComments (20170401075839)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+Started GET "/?page=2" for ::1 at 2017-04-01 17:13:55 +0600
+Processing by ImagesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.9ms)[0m  [1m[34mSELECT  "images".* FROM "images" ORDER BY id DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 12], ["OFFSET", 12]]
+  Rendered collection of templates [0 times] (0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "images"[0m
+  Rendered images/index.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_navbar.html.erb (2.4ms)
+Completed 200 OK in 318ms (Views: 308.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2017-04-01 17:14:00 +0600
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT  "images".* FROM "images" ORDER BY id DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 12], ["OFFSET", 0]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered images/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 182ms (Views: 179.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-04-01 17:25:47 +0600
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (1.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" ORDER BY id DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 12], ["OFFSET", 0]]
+  Rendered collection of templates [0 times] (0.1ms)
+  Rendered images/index.html.erb within layouts/application (28.4ms)
+  Rendered layouts/_navbar.html.erb (6.6ms)
+Completed 200 OK in 450ms (Views: 429.0ms | ActiveRecord: 1.2ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "role", "name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "admin@admin.com"], ["encrypted_password", "$2a$11$I7wwx7JwsA/vFcyUWy.tze7JgTJK3Ir05slge7aj17Fy5ykuq8K1O"], ["created_at", 2017-04-01 11:41:11 UTC], ["updated_at", 2017-04-01 11:41:11 UTC], ["role", "admin"], ["name", "admin"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kylee@schmeler.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "kylee@schmeler.name"], ["encrypted_password", "$2a$11$20ZhgWC9XZNcMMxsfyNrD.qPxEUHngez.FwmP0W1tup5m4nIezzFO"], ["created_at", 2017-04-01 11:41:11 UTC], ["updated_at", 2017-04-01 11:41:11 UTC], ["name", "Junior Orn"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["title", "Butcher umami skatebo"], ["created_at", 2017-04-01 11:41:11 UTC], ["updated_at", 2017-04-01 11:41:11 UTC], ["picture", "1.jpg"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["title", "Scenester messenger b"], ["created_at", 2017-04-01 11:41:11 UTC], ["updated_at", 2017-04-01 11:41:11 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["title", "Everyday leggings 3 w"], ["created_at", 2017-04-01 11:41:11 UTC], ["updated_at", 2017-04-01 11:41:11 UTC], ["picture", "1.jpg"]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["title", "Offal put a bird on i"], ["created_at", 2017-04-01 11:41:11 UTC], ["updated_at", 2017-04-01 11:41:11 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["title", "Pitchfork 3 wolf moon"], ["created_at", 2017-04-01 11:41:11 UTC], ["updated_at", 2017-04-01 11:41:11 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "adelia@ullrich.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "adelia@ullrich.biz"], ["encrypted_password", "$2a$11$I0dT4wzCEDqj6cWqG13dHu8qxrMyqWCjs1VpVHRnUqQk2plFD/HPa"], ["created_at", 2017-04-01 11:41:11 UTC], ["updated_at", 2017-04-01 11:41:11 UTC], ["name", "Mrs. Effie Ernser"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["title", "Chia next level singl"], ["created_at", 2017-04-01 11:41:12 UTC], ["updated_at", 2017-04-01 11:41:12 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["title", "Vinegar salvia butche"], ["created_at", 2017-04-01 11:41:12 UTC], ["updated_at", 2017-04-01 11:41:12 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["title", "Ennui fixie cliche pi"], ["created_at", 2017-04-01 11:41:12 UTC], ["updated_at", 2017-04-01 11:41:12 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["title", "Yolo cleanse cred gen"], ["created_at", 2017-04-01 11:41:12 UTC], ["updated_at", 2017-04-01 11:41:12 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["title", "You probably haven't "], ["created_at", 2017-04-01 11:41:12 UTC], ["updated_at", 2017-04-01 11:41:12 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nickolas@dickicain.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "nickolas@dickicain.co"], ["encrypted_password", "$2a$11$P7CiujmfRj4I5L2mxIscQuY0vnmaKQR03B8NinF2Enk6HMa74B.c."], ["created_at", 2017-04-01 11:41:12 UTC], ["updated_at", 2017-04-01 11:41:12 UTC], ["name", "Virgie Hilll"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 4], ["title", "Pitchfork banh mi thu"], ["created_at", 2017-04-01 11:41:12 UTC], ["updated_at", 2017-04-01 11:41:12 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 4], ["title", "Polaroid kitsch asymm"], ["created_at", 2017-04-01 11:41:12 UTC], ["updated_at", 2017-04-01 11:41:12 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 4], ["title", "Tilde small batch nor"], ["created_at", 2017-04-01 11:41:12 UTC], ["updated_at", 2017-04-01 11:41:12 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 4], ["title", "Neutra tattooed cardi"], ["created_at", 2017-04-01 11:41:13 UTC], ["updated_at", 2017-04-01 11:41:13 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 4], ["title", "Disrupt squid tote ba"], ["created_at", 2017-04-01 11:41:13 UTC], ["updated_at", 2017-04-01 11:41:13 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tiana.walker@kemmerheaney.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "tiana.walker@kemmerheaney.info"], ["encrypted_password", "$2a$11$pf8SnBB4XWq2w/N6EtnGP.pi7ceNYuLAZohM3tHFm1xTf8mvYSyaW"], ["created_at", 2017-04-01 11:41:13 UTC], ["updated_at", 2017-04-01 11:41:13 UTC], ["name", "Scottie Olson IV"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 5], ["title", "Mumblecore loko polar"], ["created_at", 2017-04-01 11:41:13 UTC], ["updated_at", 2017-04-01 11:41:13 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 5], ["title", "Intelligentsia banjo "], ["created_at", 2017-04-01 11:41:13 UTC], ["updated_at", 2017-04-01 11:41:13 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 5], ["title", "Franzen single-origin"], ["created_at", 2017-04-01 11:41:13 UTC], ["updated_at", 2017-04-01 11:41:13 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 5], ["title", "Quinoa sriracha disru"], ["created_at", 2017-04-01 11:41:13 UTC], ["updated_at", 2017-04-01 11:41:13 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 5], ["title", "Hashtag wes anderson "], ["created_at", 2017-04-01 11:41:13 UTC], ["updated_at", 2017-04-01 11:41:13 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kaylin_schuster@willms.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "kaylin_schuster@willms.name"], ["encrypted_password", "$2a$11$SO7Vj6lo5MYKJ/qN0uXu4Os2Lw8eQaU6XDTuEBTOsV.HwpTHC1Cqi"], ["created_at", 2017-04-01 11:41:13 UTC], ["updated_at", 2017-04-01 11:41:13 UTC], ["name", "Brett Johnson"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 6], ["title", "Butcher austin tousle"], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 6], ["title", "Messenger bag tilde 8"], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 6], ["title", "Yr next level whateve"], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 6], ["title", "Pitchfork photo booth"], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 6], ["title", "Intelligentsia fixie "], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "user_id", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "The only pattern Chuck Norris knows is God Object."], ["rating", 4], ["user_id", 4], ["image_id", 24], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "user_id", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Chuck Norris went out of an infinite loop."], ["rating", 5], ["user_id", 6], ["image_id", 18], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "user_id", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Chuck Norris programs do not accept input."], ["rating", 3], ["user_id", 2], ["image_id", 2], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "user_id", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Chuck Norris's first program was kill -9."], ["rating", 3], ["user_id", 1], ["image_id", 20], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "user_id", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Chuck Norris's first program was kill -9."], ["rating", 3], ["user_id", 5], ["image_id", 3], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "user_id", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Chuck Norris has root access to your system."], ["rating", 2], ["user_id", 3], ["image_id", 22], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "user_id", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Chuck Norris can access the DB from the UI."], ["rating", 4], ["user_id", 5], ["image_id", 20], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "user_id", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Chuck Norris doesn't need an OS."], ["rating", 1], ["user_id", 2], ["image_id", 12], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "user_id", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Chuck Norris can compile syntax errors."], ["rating", 5], ["user_id", 1], ["image_id", 12], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "user_id", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Chuck Norris burst the dot com bubble."], ["rating", 1], ["user_id", 5], ["image_id", 10], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "user_id", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Chuck Norris programs do not accept input."], ["rating", 3], ["user_id", 2], ["image_id", 8], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "user_id", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Chuck Norris can compile syntax errors."], ["rating", 3], ["user_id", 2], ["image_id", 11], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "user_id", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Chuck Norris can instantiate an abstract class."], ["rating", 3], ["user_id", 1], ["image_id", 22], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "user_id", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Chuck Norris knows the last digit of PI."], ["rating", 5], ["user_id", 3], ["image_id", 5], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "user_id", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "Chuck Norris can instantiate an abstract class."], ["rating", 1], ["user_id", 4], ["image_id", 7], ["created_at", 2017-04-01 11:41:14 UTC], ["updated_at", 2017-04-01 11:41:14 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for ::1 at 2017-04-01 17:41:22 +0600
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.8ms)[0m  [1m[34mSELECT  "images".* FROM "images" ORDER BY id DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 12], ["OFFSET", 0]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered collection of images/_image.html.erb [12 times] (179.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "images"[0m
+  Rendered images/index.html.erb within layouts/application (240.1ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 510ms (Views: 493.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/images/23" for ::1 at 2017-04-01 17:41:25 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"23"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-04-01 17:41:25 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+Completed 200 OK in 219ms (Views: 214.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-04-01 17:41:30 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rCWys81zUot54FhRg1v67ZtdrfRy1igvzeJPlGqwPcNWKU/TNJDfS5Tgdzs+2zc6Tv3tGIM5wWgqBZRjJzi8pg==", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-04-01 11:41:30 UTC], ["last_sign_in_at", 2017-04-01 11:41:30 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", 2017-04-01 11:41:30 UTC], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/images/23
+Completed 302 Found in 163ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/images/23" for ::1 at 2017-04-01 17:41:30 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mImageComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 23], ["LIMIT", 1]]
+  Rendered image_comments/_form.html.erb (3.3ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 23]]
+  [1m[36mImageComment Load (0.2ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 23]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered images/show.html.erb within layouts/application (23.2ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 246ms (Views: 234.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/images/20" for ::1 at 2017-04-01 17:41:40 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mImageComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 20], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.2ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 20]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 20]]
+  Rendered image_comments/_form.html.erb (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 20]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of image_comments/_image_comment.html.erb [2 times] (4.3ms)
+  Rendered images/show.html.erb within layouts/application (18.7ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 237ms (Views: 230.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/images/20" for ::1 at 2017-04-01 17:43:23 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mImageComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 20], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.2ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 20]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 20]]
+  Rendered image_comments/_form.html.erb (4.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 20]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of image_comments/_image_comment.html.erb [2 times] (4.2ms)
+  Rendered images/show.html.erb within layouts/application (25.3ms)
+  Rendered layouts/_navbar.html.erb (4.0ms)
+Completed 200 OK in 2519ms (Views: 2511.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/images/20" for ::1 at 2017-04-01 17:44:00 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mImageComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 20], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.1ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 20]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 20]]
+  Rendered image_comments/_form.html.erb (4.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 20]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of image_comments/_image_comment.html.erb [2 times] (2.9ms)
+  Rendered images/show.html.erb within layouts/application (20.4ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 253ms (Views: 245.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/images/20" for ::1 at 2017-04-01 17:44:27 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mImageComment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 20], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.1ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 20]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 20]]
+  Rendered image_comments/_form.html.erb (2.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 20]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of image_comments/_image_comment.html.erb [2 times] (3.1ms)
+  Rendered images/show.html.erb within layouts/application (17.1ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+Completed 200 OK in 1898ms (Views: 1893.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1" for ::1 at 2017-04-01 17:44:55 +0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered users/show.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+Completed 200 OK in 184ms (Views: 175.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/new" for ::1 at 2017-04-01 17:44:56 +0600
+Processing by ImagesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/_form.html.erb (4.9ms)
+  Rendered images/new.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_navbar.html.erb (3.0ms)
+Completed 200 OK in 173ms (Views: 166.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/images" for ::1 at 2017-04-01 17:45:02 +0600
+Processing by ImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qewNHgrL3Arb0V0BcWrKN/F5Uai0MsZD8OlfKrvX6lmGlZvDARYk5cFK2ArLvtZr9L+915eUHASmQRy1qe5GMQ==", "image"=>{"title"=>"asd", "picture"=>#<ActionDispatch::Http::UploadedFile:0x007fc504428558 @tempfile=#<Tempfile:/var/folders/wj/qq9j5qg12gzcl9kdvf77yvzm0000gn/T/RackMultipart20170401-12738-p8xukj.png>, @original_filename="textures_4.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image[picture]\"; filename=\"textures_4.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Image"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["title", "asd"], ["created_at", 2017-04-01 11:45:02 UTC], ["updated_at", 2017-04-01 11:45:02 UTC], ["picture", "textures_4.png"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 150ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2017-04-01 17:45:02 +0600
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" ORDER BY id DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 12], ["OFFSET", 0]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered collection of images/_image.html.erb [12 times] (20.7ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "images"[0m
+  Rendered images/index.html.erb within layouts/application (42.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (4.0ms)
+Completed 200 OK in 282ms (Views: 277.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/images/26" for ::1 at 2017-04-01 17:45:04 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImageComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 26], ["LIMIT", 1]]
+  Rendered image_comments/_form.html.erb (5.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 26]]
+  [1m[36mImageComment Load (0.1ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 26]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered images/show.html.erb within layouts/application (21.8ms)
+  Rendered layouts/_navbar.html.erb (2.4ms)
+Completed 200 OK in 255ms (Views: 246.3ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/images/26" for ::1 at 2017-04-01 17:45:09 +0600
+Processing by ImagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4KBSdoq4htTKTF2p5hHkmaOty4PwnSzOxXggbNBH6LPP2cSrgWV+O9DX2KJcxfjFpmsn/NM79omT0GPzwn5E2w==", "id"=>"26"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "images" WHERE "images"."id" = ?[0m  [["id", 26]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 11ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/users/1" for ::1 at 2017-04-01 17:45:09 +0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navbar.html.erb (2.7ms)
+Completed 200 OK in 199ms (Views: 195.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for ::1 at 2017-04-01 17:45:30 +0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered users/show.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navbar.html.erb (2.6ms)
+Completed 200 OK in 209ms (Views: 204.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/new" for ::1 at 2017-04-01 17:45:32 +0600
+Processing by ImagesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/_form.html.erb (2.8ms)
+  Rendered images/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+Completed 200 OK in 195ms (Views: 191.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/images" for ::1 at 2017-04-01 17:45:47 +0600
+Processing by ImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"me4Jpb4W9cLXSWx5uvtvZk9yufDx/pRqA2S6GJXgyqy2l594tcsNLc3S6XIAL3M6SrRVj9JYTi1VzPmHh9lmxA==", "image"=>{"title"=>"sf", "picture"=>#<ActionDispatch::Http::UploadedFile:0x007fc50bc2e340 @tempfile=#<Tempfile:/var/folders/wj/qq9j5qg12gzcl9kdvf77yvzm0000gn/T/RackMultipart20170401-12738-h6zstm.jpg>, @original_filename="maxresdefault.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image[picture]\"; filename=\"maxresdefault.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Image"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["title", "sf"], ["created_at", 2017-04-01 11:45:47 UTC], ["updated_at", 2017-04-01 11:45:47 UTC], ["picture", "maxresdefault.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 188ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2017-04-01 17:45:47 +0600
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT  "images".* FROM "images" ORDER BY id DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 12], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered collection of images/_image.html.erb [12 times] (30.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "images"[0m
+  Rendered images/index.html.erb within layouts/application (50.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (3.9ms)
+Completed 200 OK in 280ms (Views: 274.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/images/27" for ::1 at 2017-04-01 17:45:49 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImageComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 27], ["LIMIT", 1]]
+  Rendered image_comments/_form.html.erb (7.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 27]]
+  [1m[36mImageComment Load (0.3ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 27]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered images/show.html.erb within layouts/application (22.3ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+Completed 200 OK in 263ms (Views: 253.9ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/images/27" for ::1 at 2017-04-01 17:45:58 +0600
+Processing by ImagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DBj4vkVLCsAxAwyyrUFZve94zE4o9nUrvOi0uHWvdv8jYW5jTpbyLyuYibkXlUXh6r4gMQtQr2zqQPcnZ5balw==", "id"=>"27"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "images" WHERE "images"."id" = ?[0m  [["id", 27]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 11ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1" for ::1 at 2017-04-01 17:45:58 +0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+Completed 200 OK in 190ms (Views: 184.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/new" for ::1 at 2017-04-01 17:46:00 +0600
+Processing by ImagesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/_form.html.erb (6.1ms)
+  Rendered images/new.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_navbar.html.erb (2.6ms)
+Completed 200 OK in 228ms (Views: 220.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/images" for ::1 at 2017-04-01 17:46:19 +0600
+Processing by ImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YRAIkSPP3qCm+BXG08yk6aKAA+hIETu+/7GlT2uPTONOaZ5MKBImT7xjkM1pGLi1p0bvl2u34fmpGebQebbgiw==", "image"=>{"title"=>"", "picture"=>#<ActionDispatch::Http::UploadedFile:0x007fc50e9b98f0 @tempfile=#<Tempfile:/var/folders/wj/qq9j5qg12gzcl9kdvf77yvzm0000gn/T/RackMultipart20170401-12738-1nj30zt.jpg>, @original_filename="1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image[picture]\"; filename=\"1.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Image"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/_form.html.erb (3.5ms)
+  Rendered images/new.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_navbar.html.erb (2.4ms)
+Completed 200 OK in 332ms (Views: 229.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/images" for ::1 at 2017-04-01 17:46:24 +0600
+Processing by ImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m/riZgVseKxzV7GrUK43pxkGjpSz8CejMjR4HNwm2J20g3S7DrGAQ2nMNKDqeiv7HMBi65BW/eRknDuDzh909Q==", "image"=>{"title"=>"hkghk", "picture"=>#<ActionDispatch::Http::UploadedFile:0x007fc504212fc0 @tempfile=#<Tempfile:/var/folders/wj/qq9j5qg12gzcl9kdvf77yvzm0000gn/T/RackMultipart20170401-12738-r25mw2.jpg>, @original_filename="1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image[picture]\"; filename=\"1.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Image"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "images" ("user_id", "title", "created_at", "updated_at", "picture") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["title", "hkghk"], ["created_at", 2017-04-01 11:46:24 UTC], ["updated_at", 2017-04-01 11:46:24 UTC], ["picture", "1.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 107ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2017-04-01 17:46:24 +0600
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" ORDER BY id DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 12], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered collection of images/_image.html.erb [12 times] (25.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "images"[0m
+  Rendered images/index.html.erb within layouts/application (42.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (3.9ms)
+Completed 200 OK in 303ms (Views: 296.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/images/28" for ::1 at 2017-04-01 17:46:26 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImageComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 28], ["LIMIT", 1]]
+  Rendered image_comments/_form.html.erb (4.7ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  [1m[36mImageComment Load (0.2ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered images/show.html.erb within layouts/application (17.7ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+Completed 200 OK in 223ms (Views: 213.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/images/28" for ::1 at 2017-04-01 17:47:15 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImageComment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 28], ["LIMIT", 1]]
+  Rendered image_comments/_form.html.erb (2.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  [1m[36mImageComment Load (0.1ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered images/show.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+Completed 200 OK in 219ms (Views: 212.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/28" for ::1 at 2017-04-01 17:47:17 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImageComment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 28], ["LIMIT", 1]]
+  Rendered image_comments/_form.html.erb (2.6ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  [1m[36mImageComment Load (0.1ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered images/show.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+Completed 200 OK in 197ms (Views: 191.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/images/28" for ::1 at 2017-04-01 17:47:18 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImageComment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 28], ["LIMIT", 1]]
+  Rendered image_comments/_form.html.erb (2.6ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  [1m[36mImageComment Load (0.1ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered images/show.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 216ms (Views: 210.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/28" for ::1 at 2017-04-01 17:47:26 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImageComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 28], ["LIMIT", 1]]
+  Rendered image_comments/_form.html.erb (2.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  [1m[36mImageComment Load (0.2ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered images/show.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+Completed 200 OK in 203ms (Views: 198.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/image_comments" for ::1 at 2017-04-01 17:47:36 +0600
+Processing by ImageCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6/XX+pS1YhayPPesXag5y075tOA8hGJAsPrFtJuSvKHEjEEnn2ia+aincqfnfCWXSz9Ynx8iuAfmUoYriasQyQ==", "image_comment"=>{"body"=>"gjghj", "rating"=>"3"}, "image_id"=>"28", "commit"=>"Create Image comment"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "user_id", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "gjghj"], ["rating", 3], ["user_id", 1], ["image_id", 28], ["created_at", 2017-04-01 11:47:36 UTC], ["updated_at", 2017-04-01 11:47:36 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/images/28
+Completed 302 Found in 25ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/images/28" for ::1 at 2017-04-01 17:47:36 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImageComment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 28], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.1ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  Rendered image_comments/_form.html.erb (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of image_comments/_image_comment.html.erb [1 times] (2.4ms)
+  Rendered images/show.html.erb within layouts/application (16.5ms)
+  Rendered layouts/_navbar.html.erb (2.8ms)
+Completed 200 OK in 222ms (Views: 215.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/images/28" for ::1 at 2017-04-01 17:49:58 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImageComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 28], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.1ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of image_comments/_image_comment.html.erb [1 times] (1.9ms)
+  Rendered image_comments/_form.html.erb (2.7ms)
+  Rendered images/show.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 221ms (Views: 216.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/image_comments" for ::1 at 2017-04-01 17:50:10 +0600
+Processing by ImageCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q6SAKNagv9qAnKI2e9+UpVaKC2FOFxs4Zz208ZWnXoWE3Rb13X1HNZoHJz3BC4j5U0znHm2xwX8xlfduh57y7Q==", "image_comment"=>{"body"=>"sdfsdf", "rating"=>"4"}, "image_id"=>"28", "commit"=>"Create Image comment"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "user_id", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "sdfsdf"], ["rating", 4], ["user_id", 1], ["image_id", 28], ["created_at", 2017-04-01 11:50:10 UTC], ["updated_at", 2017-04-01 11:50:10 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/images/28
+Completed 302 Found in 23ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/images/28" for ::1 at 2017-04-01 17:50:10 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImageComment Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 28], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.3ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of image_comments/_image_comment.html.erb [2 times] (2.6ms)
+  Rendered image_comments/_form.html.erb (3.3ms)
+  Rendered images/show.html.erb within layouts/application (20.3ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+Completed 200 OK in 254ms (Views: 246.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/images/28" for ::1 at 2017-04-01 17:50:28 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImageComment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 28], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.2ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of image_comments/_image_comment.html.erb [2 times] (3.1ms)
+  Rendered image_comments/_form.html.erb (4.6ms)
+  Rendered images/show.html.erb within layouts/application (22.6ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 262ms (Views: 256.3ms | ActiveRecord: 0.9ms)
+
+

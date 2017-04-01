@@ -1,21 +1,36 @@
 <div class="container">
-	<%= image_tag @image.picture, class: "img-responsive" %>
-	<%= button_to 'delete image', image_path(@image), method: 'delete' if @image.user == current_user %>
+	<%= image_tag @image.picture, class: "img-responsive img-show" %>
+	<%= button_to 'delete image', image_path(@image), method: 'delete', class: "btn btn-danger" if @image.user == current_user %>
 	Author: <%= link_to @image.user.name, user_path(@image.user) %><br>
-	Rating: <%= @image.rating %>
-	<div id="inner">
-		<h3>new comment</h3>
-		<%= render 'image_comments/form' %>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8">
-					<div class="page-header">
-						<h1><small class="pull-right"><%= @image.image_comments.count %></small> Comments </h1>
-					</div> 
-					<div class="comments-list">
-						<%= render @image.image_comments.reverse %>
-					</div>
+	Rating: <%= @image.rating %><br>
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+		Add comment
+	</button>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="page-header">
+					<h1><small class="pull-right"><%= @image.image_comments.count %></small> Comments </h1>
+				</div> 
+				<div class="comments-list">
+					<%= render @image.image_comments.reverse %>
 				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Add comment</h4>
+			</div>
+			<div class="modal-body">
+				<%= render 'image_comments/form' %>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 			</div>
 		</div>
 	</div>
