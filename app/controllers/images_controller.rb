@@ -24,8 +24,9 @@ class ImagesController < ApplicationController
 	end
 
 	def destroy
-		Image.destroy(params[:id])
-		redirect_to :back
+		@image = Image.find(params[:id])
+		@image.destroy if @image.user == current_user
+		redirect_to user_path(current_user)
 	end
 
 	private

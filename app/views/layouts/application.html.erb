@@ -10,6 +10,9 @@
 
   <body>
     <%= render 'layouts/navbar' %>
+    <% flash.each do |type, message| %>
+      <%= content_tag :div, message, class: "alert alert-#{type}" %>
+    <% end %>
   	<p><%= notice %></p>
 		<p><%= alert %></p>
     <%= yield %>

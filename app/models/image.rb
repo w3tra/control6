@@ -3,6 +3,9 @@ class Image < ApplicationRecord
   has_many :image_comments
   mount_uploader :picture, PictureUploader
 
+  validates :title, presence: true, length: {maximum: 20}
+  validates :picture, presence: true
+
   def rating
   	if self.image_comments.any?
 	  	sum = 0

@@ -1,6 +1,5 @@
 <%= bootstrap_form_for [@image_comment] do |f| %>
 	<%= f.text_field :body %>
-	<%= f.number_field :rating %>
 	<%= f.select :rating, ((1..5).map {|i| [i,i] }) %>
 	<%= hidden_field_tag :image_id, @image.id %>
 	<%= f.submit %>

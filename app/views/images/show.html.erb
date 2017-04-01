@@ -1,6 +1,7 @@
 <div class="container">
 	<%= image_tag @image.picture, class: "img-responsive" %>
 	Rating: <%= @image.rating %>
+	<%= link_to 'delete image', image_path(@image), method: 'delete' if @image.user == current_user %>
 	<h3>new comment</h3>
 	<%= render 'image_comments/form' %>
 	<div class="container">
