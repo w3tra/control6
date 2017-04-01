@@ -15,7 +15,7 @@ User.create! do |u|
 5.times do 
 	user = User.create!(email: Faker::Internet.email, name: Faker::Name.name, password: 'qweqwe')
 	5.times do
-		image = user.images.create(title: Faker::Hipster.sentence(3))
+		image = user.images.create(title: Faker::Hipster.sentence(3)[0..20])
 		image.picture = Rails.root.join("app/assets/images/1.jpg").open
 		image.save!
 	end

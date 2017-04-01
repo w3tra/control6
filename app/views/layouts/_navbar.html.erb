@@ -21,7 +21,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><%= link_to 'Edit profile', edit_user_registration_path(current_user) %></li>
-                <li><a href="#">View orders</a></li>
+                <li><%= link_to "admin panel", admin_root_path if current_user.role?(:admin) %></li>
                 <li class="divider"></li>
                 <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
               </ul>

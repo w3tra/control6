@@ -4,4 +4,6 @@ class ImageComment < ApplicationRecord
 
   validates :body, presence: true, length: {maximum: 50}
   validates :rating, presence: true, length: {in: 1..5}
+  validates :user, presence: true
+  validates :image, presence: true
 end
