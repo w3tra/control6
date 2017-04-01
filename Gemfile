@@ -17,6 +17,7 @@ gem 'devise-bootstrapped'
 gem 'faker'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'bootstrap_form'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server

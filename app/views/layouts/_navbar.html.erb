@@ -14,7 +14,7 @@
       <ul class="navbar-nav navbar-right">
         <% if user_signed_in? %>
           <p class="navbar-text">
-            Hello, <%= link_to current_user.name, edit_user_registration_path(current_user), class: 'navbar-link' %>
+            Hello, <%= link_to current_user.name, user_path(current_user), class: 'navbar-link' %>
           </p>
           <ul class="nav navbar-nav">
             <li class="dropdown">

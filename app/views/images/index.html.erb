@@ -1,5 +1,1 @@
-<% @images.each do |image| %>
-	<%= image.title %>
-	<%= image.user.name %> <br>
-	<%= image_tag image.picture_url(:thumb) %>
-<% end %>
+<%= render @images %>

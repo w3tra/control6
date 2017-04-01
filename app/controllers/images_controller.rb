@@ -1,5 +1,35 @@
 class ImagesController < ApplicationController
+	before_action :authenticate_user!, :except => [:index]
+
 	def index
-		@images = Image.all
+		@images = Image.order('id DESC')
+	end
+
+	def new
+		@image = Image.new
+	end
+
+	def create
+		@image = current_user.images.create(image_params)
+		if @image.save
+			redirect_to root_path
+		else
+			render 'new'
+		end
+	end
+
+	def show
+		@image = Image.find(params[:id])
+	end
+
+	def destroy
+		Image.destroy(params[:id])
+		redirect_to :back
+	end
+
+	private
+
+	def image_params
+		params.require(:image).permit(:title, :user, :picture)
 	end
 end
