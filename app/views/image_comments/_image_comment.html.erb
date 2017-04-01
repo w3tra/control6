@@ -1,3 +1,12 @@
-<b><%= image_comment.user.name %></b> says:
-<%= image_comment.body %>
-<b>rating:</b> <%= image_comment.rating %> <br>
+<div class="media">
+	<p class="pull-right"><small>5 days ago</small></p>
+	<a class="media-left" href="#">
+		<img src="http://lorempixel.com/40/40/people/1/">
+	</a>
+	<div class="media-body">
+
+		<h4 class="media-heading user_name"><%= image_comment.user.name %></h4>
+		<%= image_comment.body %>
+		<p><small><b>rating:</b> <%= image_comment.rating %></small></p>
+	</div>
+</div>

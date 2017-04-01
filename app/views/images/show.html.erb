@@ -3,5 +3,16 @@
 	Rating: <%= @image.rating %>
 	<h3>new comment</h3>
 	<%= render 'image_comments/form' %>
-	<%= render @image.image_comments.reverse %>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="page-header">
+					<h1><small class="pull-right"><%= @image.image_comments.count %></small> Comments </h1>
+				</div> 
+				<div class="comments-list">
+					<%= render @image.image_comments.reverse %>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

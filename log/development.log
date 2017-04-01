@@ -11567,3 +11567,350 @@ Processing by ImagesController#show as HTML
 Completed 200 OK in 228ms (Views: 208.8ms | ActiveRecord: 2.8ms)
 
 
+Started GET "/images/25" for ::1 at 2017-04-01 15:47:03 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mImageComment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 25], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.1ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 25]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 25]]
+  Rendered image_comments/_form.html.erb (3.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered collection of image_comments/_image_comment.html.erb [2 times] (2.9ms)
+  Rendered images/show.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 212ms (Views: 205.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/25" for ::1 at 2017-04-01 15:48:00 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mImageComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 25], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.3ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 25]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 25]]
+  Rendered image_comments/_form.html.erb (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered collection of image_comments/_image_comment.html.erb [2 times] (2.8ms)
+  Rendered images/show.html.erb within layouts/application (13.8ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 218ms (Views: 212.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/images/25" for ::1 at 2017-04-01 15:48:11 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mImageComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 25], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.2ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 25]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 25]]
+  Rendered image_comments/_form.html.erb (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered collection of image_comments/_image_comment.html.erb [2 times] (2.9ms)
+  Rendered images/show.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+Completed 200 OK in 202ms (Views: 192.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/images/25" for ::1 at 2017-04-01 15:48:44 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mImageComment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 25], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.1ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 25]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 25]]
+  Rendered image_comments/_form.html.erb (2.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 25]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered collection of image_comments/_image_comment.html.erb [2 times] (3.3ms)
+  Rendered images/show.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 194ms (Views: 188.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/image_comments" for ::1 at 2017-04-01 15:49:19 +0600
+Processing by ImageCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KWPHWTSQQGhr2mGnKzduc/53JQ2FhdgfaU6r1HAXI6AhBfQdkTzhkDtM/xGRO+lDBDsqBYTxpXsTAdkIoUtZPw==", "image_comment"=>{"body"=>"topkekcheburek", "rating"=>"2"}, "image_id"=>"25", "commit"=>"Create Image comment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "topkekcheburek"], ["rating", 2], ["created_at", 2017-04-01 09:49:19 UTC], ["updated_at", 2017-04-01 09:49:19 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "image_comments" SET "user_id" = ?, "image_id" = ?, "updated_at" = ? WHERE "image_comments"."id" = ?[0m  [["user_id", 1], ["image_id", 25], ["updated_at", 2017-04-01 09:49:19 UTC], ["id", 51]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from create at /Users/wetra/Ruby/control6/app/controllers/image_comments_controller.rb:8)
+Redirected to http://localhost:3000/images/25
+Completed 302 Found in 13ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/images/25" for ::1 at 2017-04-01 15:49:19 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mImageComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 25], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.4ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 25]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 25]]
+  Rendered image_comments/_form.html.erb (2.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 25]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered collection of image_comments/_image_comment.html.erb [3 times] (4.4ms)
+  Rendered images/show.html.erb within layouts/application (16.6ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 206ms (Views: 199.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/1" for ::1 at 2017-04-01 15:51:21 +0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered users/show.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 238ms (Views: 231.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/2" for ::1 at 2017-04-01 15:51:30 +0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered collection of images/_image.html.erb [5 times] (2.1ms)
+  Rendered users/show.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 195ms (Views: 192.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/1" for ::1 at 2017-04-01 15:51:34 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mImageComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 1], ["LIMIT", 1]]
+  Rendered image_comments/_form.html.erb (2.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 1]]
+  [1m[36mImageComment Load (0.1ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered images/show.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 187ms (Views: 179.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/2" for ::1 at 2017-04-01 15:55:31 +0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered collection of images/_image.html.erb [5 times] (2.4ms)
+  Rendered users/show.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+Completed 200 OK in 231ms (Views: 227.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/2" for ::1 at 2017-04-01 15:55:32 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mImageComment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 2], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.3ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 2]]
+  Rendered image_comments/_form.html.erb (7.4ms)
+  Rendered images/show.html.erb within layouts/application (15.4ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (2 for 4..6)):
+    1: <%= bootstrap_form_for [@image_comment] do |f| %>
+    2: 	<%= f.text_field :body %>
+    3: 	<%= f.number_field :rating %>
+    4: 	<%= f.collection_select :rating, (1..5) %>
+    5: 	<%= hidden_field_tag :image_id, @image.id %>
+    6: 	<%= f.submit %>
+    7: <% end %>
+  
+app/views/image_comments/_form.html.erb:4:in `block in _app_views_image_comments__form_html_erb__271575563295214766_70242145631060'
+app/views/image_comments/_form.html.erb:1:in `_app_views_image_comments__form_html_erb__271575563295214766_70242145631060'
+app/views/images/show.html.erb:5:in `_app_views_images_show_html_erb__1928869521708652874_70242143616560'
+  Rendering /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.9ms)
+Started GET "/images/2" for ::1 at 2017-04-01 15:55:46 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mImageComment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 2], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.2ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 2]]
+  Rendered image_comments/_form.html.erb (20.0ms)
+  Rendered images/show.html.erb within layouts/application (26.1ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `value' for 1:Fixnum):
+    1: <%= bootstrap_form_for [@image_comment] do |f| %>
+    2: 	<%= f.text_field :body %>
+    3: 	<%= f.number_field :rating %>
+    4: 	<%= f.collection_select :rating, (1..5), :rating, :value %>
+    5: 	<%= hidden_field_tag :image_id, @image.id %>
+    6: 	<%= f.submit %>
+    7: <% end %>
+  
+app/views/image_comments/_form.html.erb:4:in `block in _app_views_image_comments__form_html_erb__271575563295214766_70242115071240'
+app/views/image_comments/_form.html.erb:1:in `_app_views_image_comments__form_html_erb__271575563295214766_70242115071240'
+app/views/images/show.html.erb:5:in `_app_views_images_show_html_erb__1928869521708652874_70242126029540'
+  Rendering /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.7ms)
+  Rendering /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.6ms)
+Started GET "/images/2" for ::1 at 2017-04-01 15:57:55 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mImageComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 2], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.1ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 2]]
+  Rendered image_comments/_form.html.erb (5.5ms)
+  Rendered images/show.html.erb within layouts/application (10.7ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `credit' for #<ImageComment:0x007fc50c06db40>):
+    1: <%= bootstrap_form_for [@image_comment] do |f| %>
+    2: 	<%= f.text_field :body %>
+    3: 	<%= f.number_field :rating %>
+    4: 	<%= f.select :credit, ((1..5).map {|i| [i,i] } << ["No limit",nil]) %>
+    5: 	<%= hidden_field_tag :image_id, @image.id %>
+    6: 	<%= f.submit %>
+    7: <% end %>
+  
+app/views/image_comments/_form.html.erb:4:in `block in _app_views_image_comments__form_html_erb__271575563295214766_70242078542720'
+app/views/image_comments/_form.html.erb:1:in `_app_views_image_comments__form_html_erb__271575563295214766_70242078542720'
+app/views/images/show.html.erb:5:in `_app_views_images_show_html_erb__1928869521708652874_70242143527400'
+  Rendering /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.2ms)
+  Rendering /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/wetra/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.4ms)
+Started GET "/images/2" for ::1 at 2017-04-01 15:58:03 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mImageComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 2], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.2ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 2]]
+  Rendered image_comments/_form.html.erb (3.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered collection of image_comments/_image_comment.html.erb [4 times] (5.0ms)
+  Rendered images/show.html.erb within layouts/application (19.8ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 229ms (Views: 221.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/images/2" for ::1 at 2017-04-01 15:58:15 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mImageComment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 2], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.2ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 2]]
+  Rendered image_comments/_form.html.erb (4.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered collection of image_comments/_image_comment.html.erb [4 times] (6.0ms)
+  Rendered images/show.html.erb within layouts/application (19.6ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 206ms (Views: 199.4ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/image_comments" for ::1 at 2017-04-01 15:58:23 +0600
+Processing by ImageCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i9/75O5V58xlVwAwrSTSrHDS4uadNSAq8lD3BCt/Z2uDucigS/lGNDXBnoYXKFWcip7t7pxBXU6IH4XY+iMd9A==", "image_comment"=>{"body"=>"", "rating"=>"5"}, "image_id"=>"2", "commit"=>"Create Image comment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "image_comments" ("body", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", ""], ["rating", 5], ["created_at", 2017-04-01 09:58:23 UTC], ["updated_at", 2017-04-01 09:58:23 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "image_comments" SET "user_id" = ?, "image_id" = ?, "updated_at" = ? WHERE "image_comments"."id" = ?[0m  [["user_id", 1], ["image_id", 2], ["updated_at", 2017-04-01 09:58:23 UTC], ["id", 52]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from create at /Users/wetra/Ruby/control6/app/controllers/image_comments_controller.rb:8)
+Redirected to http://localhost:3000/images/2
+Completed 302 Found in 18ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/images/2" for ::1 at 2017-04-01 15:58:23 +0600
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering images/show.html.erb within layouts/application
+  [1m[36mImageComment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "image_comments" WHERE "image_comments"."image_id" = ? LIMIT ?[0m  [["image_id", 2], ["LIMIT", 1]]
+  [1m[36mImageComment Load (0.2ms)[0m  [1m[34mSELECT "image_comments".* FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 2]]
+  Rendered image_comments/_form.html.erb (4.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "image_comments" WHERE "image_comments"."image_id" = ?[0m  [["image_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered collection of image_comments/_image_comment.html.erb [5 times] (5.9ms)
+  Rendered images/show.html.erb within layouts/application (17.7ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 210ms (Views: 204.3ms | ActiveRecord: 1.3ms)
+
+
