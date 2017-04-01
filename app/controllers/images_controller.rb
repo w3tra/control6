@@ -2,7 +2,7 @@ class ImagesController < ApplicationController
 	before_action :authenticate_user!, :except => [:index]
 
 	def index
-		@images = Image.order('id DESC')
+		@images = Image.page(params[:page]).per(12).order('id DESC')
 	end
 
 	def new

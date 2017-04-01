@@ -253,6 +253,7 @@ DEPENDENCIES
   faker
   jbuilder (~> 2.5)
   jquery-rails
+  kaminari
   listen (~> 3.0.5)
   mini_magick
   puma (~> 3.0)

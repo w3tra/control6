@@ -1,7 +1,8 @@
 <div class="container">
 	<div class="row">
 		<div class='list-group gallery'>
-		<%= render @images %>
+			<%= render @images %>
 		</div>
 	</div>
+	<%= paginate @images %>
 </div>
