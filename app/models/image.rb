@@ -1,6 +1,6 @@
 class Image < ApplicationRecord
   belongs_to :user
-  has_many :image_comments
+  has_many :image_comments, dependent: :destroy
   mount_uploader :picture, PictureUploader
 
   validates :title, presence: true, length: {maximum: 40}
