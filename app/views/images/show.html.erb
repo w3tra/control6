@@ -1,3 +1,7 @@
 <div class="container">
 	<%= image_tag @image.picture, class: "img-responsive" %>
+	Rating: <%= @image.rating %>
+	<h3>new comment</h3>
+	<%= render 'image_comments/form' %>
+	<%= render @image.image_comments.reverse %>
 </div>

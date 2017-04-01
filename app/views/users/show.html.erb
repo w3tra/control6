@@ -1,3 +1,3 @@
 <h1><%= @user.name%></h1>
-<%= link_to 'new_picture', new_image_path %> <br>
+<%= link_to 'new_picture', new_image_path if @user == current_user %> <br>
 <%= render @user.images %>

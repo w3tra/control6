@@ -20,6 +20,7 @@ class ImagesController < ApplicationController
 
 	def show
 		@image = Image.find(params[:id])
+		@image_comment = ImageComment.new
 	end
 
 	def destroy

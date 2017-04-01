@@ -1,3 +1,8 @@
-<%= image.title %>
-<%= image.user.name %> <br>
-<%= link_to (image_tag image.picture_url(:thumb), class: "img-responsive"), image_path(image) %>
+<div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+	<%= link_to image_path(image), rel: "lightbox", class: "thumbnail fancybox" do %>
+		<%= image_tag image.picture_url(:thumb), class: "img-responsive" %>
+		<div class='text-right'>
+			<small class='text-muted'><%= image.title[0..15] %> by: <%= image.user.name %></small>
+		</div>
+	<% end %>
+</div> 

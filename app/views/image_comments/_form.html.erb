@@ -1,0 +1,6 @@
+<%= bootstrap_form_for [@image_comment] do |f| %>
+	<%= f.text_field :body %>
+	<%= f.number_field :rating %>
+	<%= hidden_field_tag :image_id, @image.id %>
+	<%= f.submit %>
+<% end %>

@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create! do |u|
         u.email     = 'admin@admin.com'
-        u.password    = 'adminadmin'
+        u.password    = 'qweqwe'
         u.role = 'admin'
         u.name = 'admin'
     end
@@ -19,4 +19,10 @@ User.create! do |u|
 		image.picture = Rails.root.join("app/assets/images/1.jpg").open
 		image.save!
 	end
+end
+
+50.times do 
+	@users = User.all
+	@images = Image.all
+	ImageComment.create(body: Faker::ChuckNorris.fact, rating: rand(1..5), user: @users.sample, image: @images.sample )
 end
