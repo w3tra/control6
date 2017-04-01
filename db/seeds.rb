@@ -11,3 +11,12 @@ User.create! do |u|
         u.role = 'admin'
         u.name = 'admin'
     end
+
+5.times do 
+	user = User.create!(email: Faker::Internet.email, name: Faker::Name.name, password: 'qweqwe')
+	5.times do
+		image = user.images.create(title: Faker::Hipster.sentence(3))
+		image.picture = Rails.root.join("app/assets/images/1.jpg").open
+		image.save!
+	end
+end
